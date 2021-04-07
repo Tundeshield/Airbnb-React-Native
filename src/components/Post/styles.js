@@ -18,23 +18,20 @@ const styles = StyleSheet.create({
 	},
 	prices: {
 		fontSize: 18,
-        marginTop:10,
+		marginTop: 10,
 	},
 	oldPrice: {
 		color: "#5b5b5b",
-        textDecorationLine:"line-through",
-
+		textDecorationLine: "line-through",
 	},
 	price: {
-        fontWeight:"bold",
-        
-
-    },
+		fontWeight: "bold",
+	},
 	totalPrice: {
-        color: "#5b5b5b",
-        textDecorationLine:"underline",
-        marginTop:10,
-    },
+		color: "#5b5b5b",
+		textDecorationLine: "underline",
+		marginTop: 10,
+	},
 	bedrooms: {
 		marginVertical: 10,
 		fontSize: 16,

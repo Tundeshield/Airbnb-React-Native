@@ -2,31 +2,25 @@ import React from "react";
 import { Text, View, Image } from "react-native";
 import styles from "./styles";
 
-const Post = () => (
+const Post = ({ post }) => (
 	<View style={styles.container}>
 		{/*Image*/}
-		<Image
-			style={styles.image}
-			source={{
-				uri:
-					"https://a0.muscache.com/im/pictures/0064df04-82a9-44f1-920d-f90449f7661c.jpg?im_w=960",
-			}}
-		/>
+		<Image style={styles.image} source={{ uri: post.image }} />
 		{/*Bed and Bedroom*/}
-		<Text style={styles.bedrooms}>1 bed . 1 bedroom</Text>
+		<Text style={styles.bedrooms}>
+			{post.bed} bed . {post.bedroom} bedroom
+		</Text>
 		{/*Type and description*/}
 		<Text style={styles.description} numberOfLines={2}>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, neque
-			ipsa quas veritatis porro quaerat quia, libero temporibus sequi nam
-			quisquam natus obcaecati et commodi.
+			{post.type} . {post.description}
 		</Text>
 		{/*Old and new price*/}
 		<Text style={styles.prices}>
-			<Text style={styles.oldPrice}>$70</Text>
-			<Text style={styles.price}>   $50</Text>
-			<Text>/night</Text>
+			<Text style={styles.oldPrice}>${post.oldPrice}</Text>
+			<Text style={styles.price}> ${post.newPrice}</Text>
+			<Text> / night</Text>
 		</Text>
-		<Text style={styles.totalPrice}>$230 Total</Text>
+		<Text style={styles.totalPrice}>$ {post.totalPrice} Total</Text>
 	</View>
 );
 
