@@ -1,19 +1,12 @@
 import React from "react";
-import { Text, View, FlatList } from "react-native";
-import Post from "./src/components/Post";
-import DestinationSearch from "./src/screens/DestinationSearch";
-import Guests from "./src/screens/Guests";
-import HomeScreen from "./src/screens/HomeScreen";
-import SearchResults from "./src/screens/SearchResults";
+import { View } from "react-native";
+import "react-native-gesture-handler";
+import Router from "./src/navigation/Router";
 
 export default function App() {
 	return (
-		<View>
-			{/* <HomeScreen /> */}
-			{/* <Post post={post1} /> */}
-			{/* <SearchResults /> */}
-			{/* <DestinationSearch /> */}
-			<Guests />
+		<View style={{ flex: 1 }}>
+			<Router />
 		</View>
 	);
 }
